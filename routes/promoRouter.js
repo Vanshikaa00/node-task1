@@ -40,7 +40,7 @@ promoRouter.route('/:promoId')
 })
 .put((req,res,next)=>{
     res.write('Updating promotion: '+req.params.promoId);
-    res.end('Updated promotion: '+req.body.name+' with details: '+req.body.description);
+    res.end(' Updated promotion: '+req.body.name+' with details: '+req.body.description);
 })
 .delete((req,res,next)=>{
     res.end('deleting promotion: '+req.params.promoId);

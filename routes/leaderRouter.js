@@ -25,27 +25,6 @@ leaderRouter.route('/')
 });
 
 
-// //for leadership
-// leaderRouter.route('/leadership')
-// .all((req,res,next)=>{
-//     res.statusCode=200;
-//     res.setHeader('Content-Type','text/plain');
-//     next();
-// })
-// .get((req,res,next)=>{
-//     res.end('All leadership coming your way!');
-// })
-// .post((req,res,next)=>{
-//     res.end('Will add the leadership: ' + req.body.name+' with details: '+ req.body.description);
-// })
-// .put((req,res,next)=>{
-//     res.statusCode=403;
-//     res.end('Put operation not supported on leadership!');
-// })
-// .delete((req,res,next)=>{
-//     res.end('deleting all leaderships!');
-// });
-
 //for specific leaders
 leaderRouter.route('/:leaderId')
 .all((req,res,next)=>{
@@ -62,7 +41,7 @@ leaderRouter.route('/:leaderId')
 })
 .put((req,res,next)=>{
     res.write('Updating leader: '+req.params.leaderId);
-    res.end('Updated leader: '+req.body.name+' with details: '+req.body.description);
+    res.end(' Updated leader: '+req.body.name+' with details: '+req.body.description);
 })
 .delete((req,res,next)=>{
     res.end('deleting leader: '+req.params.leaderId);
